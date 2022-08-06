@@ -16,7 +16,7 @@ global.donasi = {
     saweria: 'https://saweria.co/IndraStore',
     nomor: '089667644225'
 }
-global.packname = 'Hinata-Md'
+global.packname = 'InzStore'
 global.author = 'WhatsApp Bot'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']

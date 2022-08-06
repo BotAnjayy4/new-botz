@@ -595,6 +595,7 @@ let teks = `*👥 TAG ALL 👥
                 break
                 case 'hidetag': {
             if (!m.isGroup) throw mess.group
+	if (!isCreator) throw mess.owner
             if (!isBotAdmins) throw mess.botAdmin
             if (!isAdmins) throw mess.admin
             hinata.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
@@ -820,6 +821,7 @@ break
             case 'antilink': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
+		    if (!isCreator) throw mess.owner
                 if (!isAdmins) throw mess.admin
                 if (args[0] === "on") {
                 if (db.data.chats[m.chat].antilink) return m.reply(`Sudah Aktif Sebelumnya`)
